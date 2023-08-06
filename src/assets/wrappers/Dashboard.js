@@ -12,11 +12,11 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     .dashboard {
-      grid-template-columns: auto 1fr;
-    }
-    .dashboard-page {
-      width: 90%;x
-    }
+    grid-template-columns: auto 1fr;
+  }
+  .dashboard-page {
+    width: 90%;
+  }
   }
 `;
 export default Wrapper;
