@@ -20,9 +20,9 @@ const Wrapper = styled.div`
     width: 100%;
     box-shadow: var(--shadow-2);
     text-align: center;
-    visibility: hidden;
     border-radius: var(--border-radius);
     background: var(--primary-500);
+    visibility: hidden;
   }
   .show-dropdown {
     visibility: visible;

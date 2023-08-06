@@ -16,7 +16,7 @@ const Wrapper = styled.section`
   }
   .dashboard-page {
     width: 90%;
-  }
+  } 
   }
 `;
 export default Wrapper;

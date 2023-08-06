@@ -5,13 +5,18 @@ import { BigSidebar, Navbar, SmallSidebar } from "../components";
 
 const DashBoardContext = createContext();
 
-const DashboardLayout = () => {
+
+
+const DashboardLayout = ({isDarkThemeEnabled}) => {
   const user = { name: "Usman" };
   const [showSidebar, setShowSidebar] = useState(false);
-  const [isDarkTheme, setisDarkTheme] = useState(false);
+  const [isDarkTheme, setisDarkTheme] = useState(isDarkThemeEnabled);
 
   const toggleDarkTheme = () => {
-    console.log("toggle dark theme");
+    const newDarkTheme = !isDarkTheme;
+    setisDarkTheme(newDarkTheme);
+    document.body.classList.toggle("dark-theme", newDarkTheme);
+    localStorage.setItem("darkTheme", newDarkTheme);
   };
 
   const toggleSidebar = () => {
@@ -48,5 +53,5 @@ const DashboardLayout = () => {
   );
 };
 
-export const useDashBoardContext = () => useContext(DashBoardContext);
+export const useDashboardContext = () => useContext(DashBoardContext);
 export default DashboardLayout;
