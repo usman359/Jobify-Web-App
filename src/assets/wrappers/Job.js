@@ -38,7 +38,7 @@ const Wrapper = styled.article`
     }
   }
   .content {
-    padding: 1rem 1.5rem;
+      padding: 1rem 1.5rem;
   }
   .content-center {
     display: grid;
